@@ -4,26 +4,24 @@ import type { FC } from 'react';
 import { Link } from '@/components/Link/Link.tsx';
 import { Page } from '@/components/Page.tsx';
 
-import tonSvg from './ton.svg';
+import heart from './heart.svg';
 
 export const IndexPage: FC = () => {
   return (
     <Page back={false}>
       <List>
         <Section
-          header="Features"
-          footer="You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects"
+          header="Title"
+          footer="Privet, this is an example, awesome"
         >
-          <Link to="/ton-connect">
-            <Cell
-              before={<Image src={tonSvg} style={{ backgroundColor: '#007AFF' }}/>}
-              subtitle="Connect your TON wallet"
-            >
-              TON Connect
-            </Cell>
-          </Link>
+          <Cell
+            before={<Image src={heart} style={{ backgroundColor: '#fc1442' }}/>}
+            subtitle="You can add your comment here"
+          >
+            Add Comment
+          </Cell>
         </Section>
-        <Section
+        {/* <Section
           header="Application Launch Data"
           footer="These pages help developer to learn more about current launch information"
         >
@@ -36,7 +34,7 @@ export const IndexPage: FC = () => {
           <Link to="/theme-params">
             <Cell subtitle="Telegram application palette information">Theme Parameters</Cell>
           </Link>
-        </Section>
+        </Section> */}
       </List>
     </Page>
   );
